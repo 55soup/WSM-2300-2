@@ -1,0 +1,27 @@
+.grid-container{
+    display: grid;
+    /* grid-template-columns: repeat(2, 1fr); 50% 50% */
+    grid-template-columns: 30% 70%;
+    max-width: 800px;
+    height: 600px;
+    font-size: 3rem;
+}
+.grid-item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.grid-item:nth-child(1){
+    background-color: lightpink;
+}
+.grid-item:nth-child(2){
+    background-color: aqua;
+}
+.grid-item:nth-child(3){
+    background-color:saddlebrown;
+    color: white;
+}
+.grid-item:nth-child(4){
+    background-color:cornflowerblue;
+    color: white;
+}
