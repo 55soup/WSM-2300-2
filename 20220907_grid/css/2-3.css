@@ -26,6 +26,37 @@ h1{
     grid-column-start: 2;
 }
 
+.grid-item:nth-child(10){ /* 선택(php/py) */
+    grid-row-start: 2;
+    grid-row-end: 4;
+    grid-column-start: 5;
+    grid-column-end: 6;
+}
+
+.grid-item:nth-child(18){ /* wsm */
+    grid-row:4/6;
+    grid-column: 2/3;
+}
+
+.grid-item:nth-child(20){ /* wsm */
+    grid-area: 4/4/6/5;
+}
+
+.grid-item:nth-child(21){ /* 코딩테스트 */
+    grid-area: 4/5/6/6;
+}
+
+.grid-item:nth-child(27){ /* 코딩테스트 */
+    grid-area: 6/2/8/3;
+}
+
+.grid-item:nth-child(28){ /* 코딩테스트 */
+    grid-area: 6/3/8/4;
+}
+
+.grid-item:nth-child(38){ /* 동아리 */
+}
+
 .days-of-the-week{
     color:white;
     background-color: coral;
