@@ -1,68 +1,82 @@
-h1{
-    text-align: center;
-    max-width: 600px; /* 시간표 너비 고정 */
-    color: coral;
-    padding: 30px;
-    font-size: 4rem;
+h1 {
+  text-align: center;
+  max-width: 600px; /* 시간표 너비 고정 */
+  color: coral;
+  padding: 30px;
+  font-size: 4rem;
 }
-.grid-container{
-    display: grid;
-    grid-template-columns: 70px repeat(5, 1fr);
-    max-width: 600px;
-    height: 400px;
-    color: coral;
+.grid-container {
+  display: grid;
+  grid-template-columns: 70px repeat(5, 1fr);
+  max-width: 600px;
+  height: 400px;
+  color: coral;
 }
-.grid-item{
-    border: 1px solid chocolate;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.grid-item {
+  border: 1px solid chocolate;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 /* .grid-item:nth-child(1){
     border: 1px solid white;
 } */
 
-.grid-item:nth-child(1){
-    grid-column-start: 2;
+.grid-item:nth-child(1) {
+  grid-column-start: 2;
 }
 
-.grid-item:nth-child(10){ /* 선택(php/py) */
-    grid-row-start: 2;
-    grid-row-end: 4;
-    grid-column-start: 5;
-    grid-column-end: 6;
+.grid-item:nth-child(10) {
+  /* 선택(php/py) */
+  grid-row-start: 2;
+  grid-row-end: 4;
+  grid-column-start: 5;
+  grid-column-end: 6;
 }
 
-.grid-item:nth-child(18){ /* wsm */
-    grid-row:4/6;
-    grid-column: 2/3;
+.grid-item:nth-child(18) {
+  /* wsm */
+  grid-row: 4/6;
+  grid-column: 2/3;
 }
 
-.grid-item:nth-child(20){ /* wsm */
-    grid-area: 4/4/6/5;
+.grid-item:nth-child(20) {
+  /* wsm */
+  grid-area: 4/4/6/5;
 }
 
-.grid-item:nth-child(21){ /* 코딩테스트 */
-    grid-area: 4/5/6/6;
+.grid-item:nth-child(21) {
+  /* 코딩테스트 */
+  grid-area: 4/5/6/6;
 }
 
-.grid-item:nth-child(27){ /* 코딩테스트 */
-    grid-area: 6/2/8/3;
+.grid-item:nth-child(27) {
+  /* 코딩테스트 */
+  grid-area: 6/2/8/3;
 }
 
-.grid-item:nth-child(28){ /* 코딩테스트 */
-    grid-area: 6/3/8/4;
+.grid-item:nth-child(28) {
+  /* 자료구조 */
+  grid-area: 6/3/8/4;
 }
 
-.grid-item:nth-child(38){ /* 동아리 */
+.grid-item:nth-child(31) {
+  grid-row: 6/8;
+  grid-column: 6/7;
 }
 
-.days-of-the-week{
-    color:white;
-    background-color: coral;
+.grid-item:nth-child(33) {
+  grid-row-start: 7;
+  grid-row-end: 9;
+  grid-column-start: 4;
+  grid-column-end: 5;
+}
+.days-of-the-week {
+  color: white;
+  background-color: coral;
 }
 
-.period{
-    color: white;
-    background-color: coral;
+.period {
+  color: white;
+  background-color: coral;
 }
