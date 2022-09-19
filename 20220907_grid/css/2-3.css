@@ -7,7 +7,7 @@ h1{
 }
 .grid-container{
     display: grid;
-    grid-template-columns: 50px repeat(5, 1fr);
+    grid-template-columns: 70px repeat(5, 1fr);
     max-width: 600px;
     height: 400px;
     color: coral;
@@ -17,4 +17,21 @@ h1{
     display: flex;
     justify-content: center;
     align-items: center;
+}
+/* .grid-item:nth-child(1){
+    border: 1px solid white;
+} */
+
+.grid-item:nth-child(1){
+    grid-column-start: 2;
+}
+
+.days-of-the-week{
+    color:white;
+    background-color: coral;
+}
+
+.period{
+    color: white;
+    background-color: coral;
 }
