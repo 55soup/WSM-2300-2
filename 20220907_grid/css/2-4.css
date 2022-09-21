@@ -6,7 +6,7 @@ h1 {
 }
 .grid-container {
   display: grid;
-  grid-template-columns: 70px repeat(5, 1fr);
+  grid-template-columns: 100px repeat(5, 1fr);
   max-width: 600px;
   height: 400px;
   color: black;
@@ -16,6 +16,8 @@ h1 {
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
+  padding: 15px;
 }
 /* .grid-item:nth-child(1){
     border: 1px solid white;
