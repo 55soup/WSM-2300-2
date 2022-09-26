@@ -1,0 +1,17 @@
+h1{
+    text-align: center;
+    max-width: 800px;
+    padding: 20px;
+}
+
+#calendar{
+    max-width: 800px;
+    height: 600px;
+    font-size: 1.5rem;
+}
+
+.grid-container,
+.date-grid-container{
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+}
