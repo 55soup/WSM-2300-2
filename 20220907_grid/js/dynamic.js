@@ -29,6 +29,7 @@ const setCalendar = (year, month) => {
     setTitle(year, month);
 
     const dateGridContainerDiv = document.getElementsByClassName("date-grid-container")[0];
+    dateGridContainerDiv.innerHTML="";
     // 1~말일까지 grid-item 만들자
     for(let i=1; i<=lastDate; i++){
         // 요소 만들자
