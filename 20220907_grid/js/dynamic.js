@@ -48,3 +48,39 @@ const setCalendar = (year, month) => {
 }
 
 setCalendar(year, month);
+
+//이전 달 달력 보이자
+const prevMonth = () => {
+    console.log("prev")
+    month--;
+    //month가 0이면, month = 12, year--;
+    if(month === 0) {
+        month=12;
+        year--;
+    }
+    setCalendar(year, month);
+}
+//다음 달 달력 보이자
+const nextMonth = () => {
+    month++;
+    // month가 13이면 month = 1, year++;
+    if(month === 13){
+        month=1;
+        year++;
+    }
+    setCalendar(year, month);
+}
+
+const initButton  = () => {
+    //HTML -> js
+    const prev_btn = document.getElementById("prev_btn");
+    const next_btn = document.getElementById("next_btn");
+
+    //js event 달자
+    // prev_btn.addEventListener("click", prevMonth)
+    // next_btn.addEventListener("click", nextMonth)
+    prev_btn.onclick = prevMonth;
+    next_btn.onclick = nextMonth;
+}
+
+initButton()
