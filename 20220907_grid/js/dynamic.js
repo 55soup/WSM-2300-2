@@ -86,6 +86,11 @@ const initButton  = () => {
 initButton()
 
 //AJAX 급식데이터 가져오자
+// .date-grid-container > .grid-item에 mouseover 이벤트 발생하면, handler를 지정하자
+// handler에서 year, month, date 정보를 가져와서 url 생성하자
+// url 호출하자
+// 응답오면, #breakfast, #lunch, #dinner에 출력하자
+
 const KEY = "a7cc721e31ef4e5199636b84dd243813";
 const ATPT_OFCDC_SC_CODE = "B10"; //서울특별시교육청
 const SD_SCHUL_CODE = "7010569"; //미림여자정보과학고등학교
