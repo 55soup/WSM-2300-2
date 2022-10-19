@@ -84,3 +84,5 @@ const initButton  = () => {
 }
 
 initButton()
+
+breakfast.innerHTML = "매운돼지<b>갈비</b>찜<br>우유"
