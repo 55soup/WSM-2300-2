@@ -85,4 +85,18 @@ const initButton  = () => {
 
 initButton()
 
-breakfast.innerHTML = "매운돼지<b>갈비</b>찜<br>우유"
+//AJAX 급식데이터 가져오자
+const KEY = "a7cc721e31ef4e5199636b84dd243813";
+const ATPT_OFCDC_SC_CODE = "B10"; //서울특별시교육청
+const SD_SCHUL_CODE = "7010569"; //미림여자정보과학고등학교
+let MLSV_YMD = "20221019"; //2022년10월19일
+let  MMEAL_SC_CODE = 2; //중식
+
+let url = `https://open.neis.go.kr/hub/mealServiceDietInfo`;
+url += `?KEY=${KEY}`
+url += `&TYPE=json`
+url += `&ATPT_OFCDC_SC_CODE=${ATPT_OFCDC_SC_CODE}`
+url += `&SD_SCHUL_CODE=${SD_SCHUL_CODE}`
+url += `&MLSV_YMD=${MLSV_YMD}`
+url += `&MMEAL_SC_CODE=${MMEAL_SC_CODE}`
+console.log(url)
