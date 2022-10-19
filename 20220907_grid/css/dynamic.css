@@ -45,6 +45,7 @@ h1{
 .menu-grid-container h1{
     font-size: 1.25rem;
     text-align: left;
+    padding: 0;
 }
 
 .breakfast,
@@ -53,4 +54,5 @@ h1{
     width: 300px;
     border-radius: 8px;
     background-color: lightgray;
+    padding: 20px;
 }
