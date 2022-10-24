@@ -105,9 +105,25 @@ const handler = (event)=>{
 // AJAX로 url 호출하자(Asynchronous JavaScript And XML)
 let getMenuByAPI = (url)=>{
     // XMLHttpRequest 만들자
-    // 요청을 보낼 방식, url, 비동기여부 설정하자
-    // 요청 전송
+    let xhr = new XMLHttpRequest();
+
     // callback
+    xhr.onreadystatechange = () => {
+        if(xhr.readyState == XMLHttpRequest.DONE && xhr.status == 200) {
+            //리퀘스트가 다 끝나서 응답이 왔다면
+            console.log("성공!");
+            console.log(xhr.response);
+        }else{
+            //실패
+        }
+    }
+
+    // 요청을 보낼 방식, url, 비동기여부 설정하자
+    xhr.open("GET", url, true);
+
+    // 요청 전송
+    xhr.send();
+
 }
 
 let dateGridContainerDiv = document.getElementsByClassName("date-grid-container")[0];
