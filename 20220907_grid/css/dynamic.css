@@ -36,6 +36,20 @@ h1{
     grid-template-columns: repeat(7, 1fr);
 }
 
+.date-grid-container{
+    color: black;
+}
+
+.grid-item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.date-grid-container .grid-item:hover{
+    background-color: hotpink;
+    border-radius: 20px;
+}
+
 .menu-grid-container{
     display:grid;
     grid-template-rows: repeat(3, minmax(min-content, max-content));
