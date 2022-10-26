@@ -87,6 +87,7 @@ initButton()
 
 //AJAX 급식데이터 가져오자
 // .date-grid-container > .grid-item에 mouseover 이벤트 발생하면, handler를 지정하자
+// url 호출하자
 const handler = (event)=>{
     let date = event.target.innerHTML; //date str형식으로 가져옴.
     const KEY = "a7cc721e31ef4e5199636b84dd243813";
@@ -106,7 +107,7 @@ const handler = (event)=>{
 let getMenuByAPI = (url)=>{
     // XMLHttpRequest 만들자
     let xhr = new XMLHttpRequest();
-
+    
     // callback
     xhr.onreadystatechange = () => {
         if(xhr.readyState == XMLHttpRequest.DONE && xhr.status == 200) {
@@ -136,7 +137,6 @@ const showMenu = (jsonString) =>{
     try{
         // json -> 조식, 중식, 석식
         breakfastMenu = json["mealServiceDietInfo"][1]["row"][0]["DDISH_NM"];
-        // 조식, 중식, 석식 -> HTML
     } catch {
     }
     try{
@@ -148,6 +148,8 @@ const showMenu = (jsonString) =>{
         dinnerMenu = json["mealServiceDietInfo"][1]["row"][2]["DDISH_NM"]
     } catch {
     }
+    // 조식, 중식, 석식 -> HTML
+    // 응답오면, #breakfast, #lunch, #dinner에 출력하자
     breakfast.innerHTML = breakfastMenu;
     lunch.innerHTML = lunchMenu;
     dinner.innerHTML = dinnerMenu;
@@ -157,7 +159,5 @@ let dateGridContainerDiv = document.getElementsByClassName("date-grid-container"
 let gridItems = dateGridContainerDiv.getElementsByClassName("grid-item");
 for(let gridItem of gridItems){
     // handler에서 year, month, date 정보를 가져와서 url 생성하자
-    gridItem.onclick = handler;
+    gridItem.onmouseover = handler; //mouseover일 때, 이벤트 처리하기
 }
-// url 호출하자
-// 응답오면, #breakfast, #lunch, #dinner에 출력하자
