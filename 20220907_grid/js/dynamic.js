@@ -112,7 +112,8 @@ let getMenuByAPI = (url)=>{
         if(xhr.readyState == XMLHttpRequest.DONE && xhr.status == 200) {
             //리퀘스트가 다 끝나서 응답이 왔다면
             console.log("성공!");
-            console.log(xhr.response);
+            // console.log(xhr.response);
+            showMenu(xhr.response);
         }else{
             //실패
         }
@@ -124,6 +125,32 @@ let getMenuByAPI = (url)=>{
     // 요청 전송
     xhr.send();
 
+}
+const showMenu = (jsonString) =>{
+    // jsonString -> json
+    let json = JSON.parse(jsonString);
+    console.log(json)
+    let breakfastMenu = "없음"
+    let lunchMenu = "없음"
+    let dinnerMenu = "없음"
+    try{
+        // json -> 조식, 중식, 석식
+        breakfastMenu = json["mealServiceDietInfo"][1]["row"][0]["DDISH_NM"];
+        // 조식, 중식, 석식 -> HTML
+    } catch {
+    }
+    try{
+        
+        lunchMenu = json["mealServiceDietInfo"][1]["row"][1]["DDISH_NM"]
+    } catch {
+    }
+    try{
+        dinnerMenu = json["mealServiceDietInfo"][1]["row"][2]["DDISH_NM"]
+    } catch {
+    }
+    breakfast.innerHTML = breakfastMenu;
+    lunch.innerHTML = lunchMenu;
+    dinner.innerHTML = dinnerMenu;
 }
 
 let dateGridContainerDiv = document.getElementsByClassName("date-grid-container")[0];
