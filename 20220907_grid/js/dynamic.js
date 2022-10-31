@@ -137,15 +137,19 @@ const showMenu = (jsonString) =>{
     try{
         // json -> 조식, 중식, 석식
         breakfastMenu = json["mealServiceDietInfo"][1]["row"][0]["DDISH_NM"];
+        // (5.13.) 삭제
+        // (열고, 숫자, 여러개 ) 닫고
+        breakfastMenu = breakfastMenu.replace(/\([0123456789\.]+\)/g,"")
     } catch {
     }
     try{
-        
         lunchMenu = json["mealServiceDietInfo"][1]["row"][1]["DDISH_NM"]
+        lunchMenu = lunchMenu.replace(/\([0-9\.]+\)/g,"")
     } catch {
     }
     try{
         dinnerMenu = json["mealServiceDietInfo"][1]["row"][2]["DDISH_NM"]
+        dinnerMenu = dinnerMenu.replace(/\([0-9\.]+\)/g,"")
     } catch {
     }
     // 조식, 중식, 석식 -> HTML
@@ -161,3 +165,5 @@ for(let gridItem of gridItems){
     // handler에서 year, month, date 정보를 가져와서 url 생성하자
     gridItem.onmouseover = handler; //mouseover일 때, 이벤트 처리하기
 }
+
+// (5.6.) 삭제 정규식 이용
