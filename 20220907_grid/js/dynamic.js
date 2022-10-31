@@ -166,4 +166,3 @@ for(let gridItem of gridItems){
     gridItem.onmouseover = handler; //mouseover일 때, 이벤트 처리하기
 }
 
-// (5.6.) 삭제 정규식 이용
