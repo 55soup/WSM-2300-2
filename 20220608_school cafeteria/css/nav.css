@@ -1,0 +1,70 @@
+/* nav */
+.container {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+  header {
+    background-color: var(--first-color);
+  }
+  nav {
+    height: 44px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  nav i {
+    font-size: 1.25rem; /* 아이콘 1.25배 */
+  }
+  nav a {
+    color: #fff;
+  }
+  .nav-toggle {
+    display: none;
+    /* visibility: hidden;  보이지는 않지만, 자리는 차지함 */
+  }
+  .nav-toggle i {
+    color: #fff;
+  }
+  .nav-list {
+    display: flex;
+    column-gap: 0.75rem; /* 12px; */
+  }
+  .nav-link {
+    display: block; /* 한 줄 전체를 차지해서 링크 동작 하도록... */
+  }
+
+  /* breakpoints */
+/* 2K & 4K */
+
+/* mobile */
+@media screen and (max-width: 600px) {
+    .nav-toggle {
+      display: block; /* nav-toggle 보이자 */
+      position: absolute; /* nav-logo 가운데 정렬 위해 */
+      cursor: pointer; /* 마우스 포인터: 손 */
+    }
+    .nav-logo {
+      margin: 0 auto; /* 가운데 정렬 */
+    }
+    .nav-list {
+      flex-direction: column;
+      /* align-items: center; */
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 44px; /* nav 높이 */
+      /* width: 100%; */
+      background-color: #2f2f2f;
+      height: 0; /* overflow: hidden과 함께 메뉴 안 보이게 하자 */
+      overflow: hidden;
+      transition: 0.3s;
+    }
+    .nav-item {
+      padding: 0.5rem 0;
+      border-bottom: 1px solid #fff;
+      text-align: center; /* 글자 가운데 정렬 */
+    }
+    .show-menu {
+      height: 164px;
+    }
+  }
