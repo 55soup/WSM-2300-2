@@ -1,0 +1,30 @@
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+.grid-container{
+    display: grid;
+    grid-template-areas: 
+    "title-a    .           title-b legend"
+    "seat-a     arrow-up    seat-b legend"
+}
+.title-a{
+    grid-area: title-a;
+}
+.title-b{
+    grid-area: title-b;
+}
+.seat-a{
+    grid-area: seat-a;
+}
+.arrow-up{
+    grid-area: arrow-up;
+}
+.seat-b{
+    grid-area: seat-b;
+}
+.legend{
+    grid-area: legend;
+}
